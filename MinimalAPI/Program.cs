@@ -30,8 +30,4 @@ app.MapGet("/user", (int id) =>
 
 app.Run();
 
-internal class User {
-    public int Id { get; set; }
-    public string Name { get; set; }
-    public int Age { get; set; }
-}
+internal record User(int Id, string Name, int Age);
